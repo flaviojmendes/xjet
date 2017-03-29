@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/toughJet.iml" filepath="$PROJECT_DIR$/.idea/modules/toughJet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/toughJet_main.iml" filepath="$PROJECT_DIR$/.idea/modules/toughJet_main.iml" group="toughJet" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/toughJet_test.iml" filepath="$PROJECT_DIR$/.idea/modules/toughJet_test.iml" group="toughJet" />
+    </modules>
+  </component>
+</project>
