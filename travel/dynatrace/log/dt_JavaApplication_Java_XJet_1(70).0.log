@@ -46,3 +46,7 @@
 2017-03-29 10:50:16 [5c445875] info    [native] Eventsender channel connected successfully
 2017-03-29 10:50:16 [5c445875] info    [native] Average transformation time for 1333 classes/modules was 0ms - maximum set to 60ms
 2017-03-29 10:50:18 [38e6d875] info    [native] License = license ok; 
+2017-03-29 18:10:44 [38148875] info    [native] Shutting down Controller
+2017-03-29 18:10:44 [38148875] info    [native] Shutting down EventSender
+2017-03-29 18:10:44 [38148875] info    [native] Shutting down Instrumentor
+2017-03-29 18:10:44 [38148875] info    [native] Shutdown successful
