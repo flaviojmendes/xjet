@@ -15,12 +15,15 @@ services:
         - db
         - toughJet
         - crazyAir
+        - dtagent
       image: xjet:latest
       volumes:
         - "./travel:/app/"
+      volumes_from:
+        - dtagent
       links:
         - db
-        - dtcollector
+        - dtagent
       ports:
         - "8000:8000"
       restart: always
@@ -29,12 +32,15 @@ services:
       build: ./toughJet
       depends_on:
         - db
+        - dtagent
       image: toughjet:latest
       volumes:
         - "./toughJet:/app/"
+      volumes_from:
+        - dtagent
       links:
         - db
-        - dtcollector
+        - dtagent
       ports:
         - "8002:8002"
       restart: always
@@ -43,44 +49,60 @@ services:
       build: ./crazyAir
       depends_on:
         - db
+        - dtagent
       image: crazyair:latest
       volumes:
         - "./crazyAir:/app/"
+      volumes_from:
+        - dtagent
       links:
         - db
-        - dtcollector
+        - dtagent
       ports:
         - "8001:8001"
       restart: always
 
-# Dockerized Dynatrace
-
-  dtcollector:
-      container_name: "dtcollector"
-      hostname: "docker-dtcollector"
-      image: "dynatrace/collector:6.5"
-      external_links:
-        - dtserver:docker-dtserver
-      environment:
-        DT_COLLECTOR_NAME: "dtcollector"
-        HOST_NAME: "docker-dtcollector"
+  dtagent:
+      container_name: "dtagent"
+      hostname: "docker-dtagent"
+      image: "dynatrace/agent:6.5"
+      links:
+        - dtcollector
+      depends_on:
+        - dtcollector
+        - dtserver
       volumes:
-        - "/tmp/log/dynatrace/collectors/dtcollector:/dynatrace/log/collector/dtcollector"
+        - /dynatrace
+        - "/tmp/log/dynatrace/agents/dtagent:/dynatrace/log/agent"
+
+  # Dockerized Dynatrace
 
   dtserver:
-      container_name: "dtserver"
-      hostname: "docker-dtserver"
-      image: "dynatrace/server:6.5-slim"
-      environment:
-        DT_SERVER_NAME: "dtserver"
-        DT_SERVER_LICENSE_KEY_FILE_URL: "${DT_SERVER_LICENSE_KEY_FILE_URL}"
-        HOST_NAME: "docker-dtserver"
-      ports:
-        - "2020:2020" # Dynatrace Clients (TCP)
-        - "2021:2021" # Dynatrace Clients (TCP with SSL)
-        - "8020:8020" # Dynatrace Web Server (HTTP)
-        - "8021:8021" # Dynatrace Web Server (HTTPS)
-        - "9911:9911" # Dynatrace Web UI (HTTPS)
-        - "9998:9998" # Dynatrace Agents (TCP)
-      volumes:
-        - "/tmp/log/dynatrace/servers/dtserver:/dynatrace/log/server/dtserver"
+    container_name: "dtserver"
+    hostname: "docker-dtserver"
+    image: "dynatrace/server:6.5"
+    environment:
+      DT_SERVER_NAME: "dtserver"
+      DT_SERVER_LICENSE_KEY_FILE_URL: "${DT_SERVER_LICENSE_KEY_FILE_URL}"
+      HOST_NAME: "docker-dtserver"
+    ports:
+      - "2020:2020" # Dynatrace Clients (TCP)
+      - "2021:2021" # Dynatrace Clients (TCP with SSL)
+      - "8020:8020" # Dynatrace Web Server (HTTP)
+      - "8021:8021" # Dynatrace Web Server (HTTPS)
+      - "9911:9911" # Dynatrace Web UI (HTTPS)
+      - "9998:9998" # Dynatrace Agents (TCP)
+    volumes:
+      - "/tmp/log/dynatrace/servers/dtserver:/dynatrace/log/server/dtserver"
+
+  dtcollector:
+    container_name: "dtcollector"
+    hostname: "docker-dtcollector"
+    image: "dynatrace/collector:6.5"
+    links:
+      - dtserver
+    environment:
+      DT_COLLECTOR_NAME: "dtcollector"
+      HOST_NAME: "docker-dtcollector"
+    volumes:
+      - "/tmp/log/dynatrace/collectors/dtcollector:/dynatrace/log/collector/dtcollector"

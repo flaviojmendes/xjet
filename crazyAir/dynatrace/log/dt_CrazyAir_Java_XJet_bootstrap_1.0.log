@@ -1,12 +1,14 @@
-2017-03-28 19:24:41 [ea0288d7] info    [native] Loading collector peer list from /app/dynatrace/agent/conf/collectorlist.CrazyAir_Java_XJet
-2017-03-28 19:24:41 [ea0288d7] info    [native] 0 entries loaded
-2017-03-28 19:24:41 [ea0288d7] info    [native] Dynatrace Bootstrap Agent 6.5.0.1289
-2017-03-28 19:24:41 [ea0288d7] info    [native] Using /app/dynatrace as Agent storage
-2017-03-28 19:24:41 [ea0288d7] info    [native] Log file is /app/dynatrace/log/dt_CrazyAir_Java_XJet_bootstrap_1.0.log
-2017-03-28 19:24:41 [ea0288d7] info    [native] Trying to connect to Collector for up to 20 seconds
-2017-03-28 19:24:41 [ea0288d7] info    [native] Connected to Collector dtserver.dojoapm_default:9998
-2017-03-28 19:24:41 [ea0288d7] info    [native] Handshake with Collector (6.5.0.1289) successful
-2017-03-28 19:24:41 [ea0288d7] info    [native] Collector requests to use agent version 6.5.0.1289 (hash: df8302e6b2545e2d51bfd530c51a28d0)
-2017-03-28 19:24:41 [ea0288d7] info    [native] Checking availability of requested agent binary linux-x86-64/libdtagentcore.so with version 6.5.0.1289
-2017-03-28 19:24:41 [ea0288d7] info    [native] Loading Agent /app/dynatrace/agent/downloads/6.5.0.1289/native/linux-x86-64/libdtagentcore.so
-2017-03-28 19:24:41 [ea0288d7] info    [native] Persisting current loaded version 6.5.0.1289 of agent CrazyAir_Java_XJet (linux-x86-64/libdtagentcore.so) to file '/app/dynatrace/agent/conf/agentversion.CrazyAir_Java_XJet'
+2017-05-17 10:06:24 [08e7c8de] info    [native] Loading collector peer list from /app/dynatrace/agent/conf/collectorlist.CrazyAir_Java_XJet
+2017-05-17 10:06:24 [08e7c8de] info    [native] 0 entries loaded
+2017-05-17 10:06:24 [08e7c8de] info    [native] Dynatrace Bootstrap Agent 6.5.0.1289
+2017-05-17 10:06:24 [08e7c8de] info    [native] Using /app/dynatrace as Agent storage
+2017-05-17 10:06:24 [08e7c8de] info    [native] Log file is /app/dynatrace/log/dt_CrazyAir_Java_XJet_bootstrap_1.0.log
+2017-05-17 10:06:24 [08e7c8de] info    [native] Trying to connect to Collector for up to 20 seconds
+2017-05-17 10:06:44 [08e7c8de] info    [native] Error connecting: connect()/apr_sockaddr_info_get(), 670003, Temporary failure in name resolution
+2017-05-17 10:06:45 [08e7c8de] severe  [native] Unable to connect to Server/Collector. Last error was: Temporary failure in name resolution (670003)
+2017-05-17 10:06:45 [08e7c8de] warning [native] Unable to register with Server/Collector dtcollector.dojoapm_default:9998
+2017-05-17 10:06:45 [08e7c8de] info    [native] Checking availability of binary of last used version of agent CrazyAir_Java_XJet (linux-x86-64/libdtagentcore.so)
+2017-05-17 10:06:45 [08e7c8de] info    [native] Look for persisted version of agent CrazyAir_Java_XJet (linux-x86-64/libdtagentcore.so) in file '/app/dynatrace/agent/conf/agentversion.CrazyAir_Java_XJet'
+2017-05-17 10:06:45 [08e7c8de] info    [native] Found persisted agent version 6.5.0.1289 for CrazyAir_Java_XJet (linux-x86-64/libdtagentcore.so)
+2017-05-17 10:06:45 [08e7c8de] info    [native] Loading Agent /app/dynatrace/agent/downloads/6.5.0.1289/native/linux-x86-64/libdtagentcore.so
+2017-05-17 10:06:47 [08e7c8de] info    [native] Persisting current loaded version 6.5.0.1289 of agent CrazyAir_Java_XJet (linux-x86-64/libdtagentcore.so) to file '/app/dynatrace/agent/conf/agentversion.CrazyAir_Java_XJet'

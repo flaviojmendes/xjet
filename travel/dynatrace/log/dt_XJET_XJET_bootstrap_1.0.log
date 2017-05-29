@@ -1,0 +1,16 @@
+2017-05-29 19:04:28 [6f28b8da] info    [native] Loading collector peer list from /app/dynatrace/agent/conf/collectorlist.XJET_XJET
+2017-05-29 19:04:28 [6f28b8da] info    [native] 0 entries loaded
+2017-05-29 19:04:28 [6f28b8da] info    [native] Dynatrace Bootstrap Agent 6.5.0.1289
+2017-05-29 19:04:28 [6f28b8da] info    [native] Using /app/dynatrace as Agent storage
+2017-05-29 19:04:28 [6f28b8da] info    [native] Log file is /app/dynatrace/log/dt_XJET_XJET_bootstrap_1.0.log
+2017-05-29 19:04:28 [6f28b8da] info    [native] Trying to connect to Collector for up to 20 seconds
+2017-05-29 19:04:48 [6f28b8da] info    [native] Error connecting: connect()/apr_sockaddr_info_get(), 670003, Temporary failure in name resolution
+2017-05-29 19:04:49 [6f28b8da] severe  [native] Unable to connect to Server/Collector. Last error was: Temporary failure in name resolution (670003)
+2017-05-29 19:04:49 [6f28b8da] warning [native] Unable to register with Server/Collector dtcollector.dojoapm_dojoapm-net:9998
+2017-05-29 19:04:49 [6f28b8da] info    [native] Checking availability of binary of last used version of agent XJET_XJET (linux-x86-64/libdtagentcore.so)
+2017-05-29 19:04:49 [6f28b8da] info    [native] Look for persisted version of agent XJET_XJET (linux-x86-64/libdtagentcore.so) in file '/app/dynatrace/agent/conf/agentversion.XJET_XJET'
+2017-05-29 19:04:49 [6f28b8da] info    [native] Persisted agent version for XJET_XJET (linux-x86-64/libdtagentcore.so) not found
+2017-05-29 19:04:49 [6f28b8da] info    [native] Agent binary not found. Looking for latest local agent binary.
+2017-05-29 19:04:49 [6f28b8da] info    [native] Latest agent binary found is /app/dynatrace/agent/downloads/6.5.0.1289/native/linux-x86-64/libdtagentcore.so
+2017-05-29 19:04:49 [6f28b8da] info    [native] Loading Agent /app/dynatrace/agent/downloads/6.5.0.1289/native/linux-x86-64/libdtagentcore.so
+2017-05-29 19:04:49 [6f28b8da] info    [native] Persisting current loaded version 6.5.0.1289 of agent XJET_XJET (linux-x86-64/libdtagentcore.so) to file '/app/dynatrace/agent/conf/agentversion.XJET_XJET'

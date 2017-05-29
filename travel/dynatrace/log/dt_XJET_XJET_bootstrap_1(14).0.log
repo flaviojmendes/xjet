@@ -1,0 +1,14 @@
+2017-05-29 21:44:57 [9c9b481e] info    [native] Loading collector peer list from /app/dynatrace/agent/conf/collectorlist.XJET_XJET
+2017-05-29 21:44:57 [9c9b481e] info    [native] 0 entries loaded
+2017-05-29 21:44:57 [9c9b481e] info    [native] Dynatrace Bootstrap Agent 6.5.0.1289
+2017-05-29 21:44:57 [9c9b481e] info    [native] Using /app/dynatrace as Agent storage
+2017-05-29 21:44:57 [9c9b481e] info    [native] Log file is /app/dynatrace/log/dt_XJET_XJET_bootstrap_1(14).0.log
+2017-05-29 21:44:57 [9c9b481e] info    [native] Trying to connect to Collector for up to 20 seconds
+2017-05-29 21:44:57 [9c9b481e] info    [native] Error connecting: connect()/apr_socket_connect(), 111, Connection refused
+2017-05-29 21:45:12 [9c9b481e] info    [native] ... last message repeated 2 times ...
+2017-05-29 21:45:12 [9c9b481e] info    [native] Connected to Collector dtserver.dojoapm_default:9998
+2017-05-29 21:45:15 [9c9b481e] info    [native] Handshake with Collector (6.5.0.1289) successful
+2017-05-29 21:45:15 [9c9b481e] info    [native] Collector requests to use agent version 6.5.0.1289 (hash: df8302e6b2545e2d51bfd530c51a28d0)
+2017-05-29 21:45:15 [9c9b481e] info    [native] Checking availability of requested agent binary linux-x86-64/libdtagentcore.so with version 6.5.0.1289
+2017-05-29 21:45:15 [9c9b481e] info    [native] Loading Agent /app/dynatrace/agent/downloads/6.5.0.1289/native/linux-x86-64/libdtagentcore.so
+2017-05-29 21:45:15 [9c9b481e] info    [native] Persisting current loaded version 6.5.0.1289 of agent XJET_XJET (linux-x86-64/libdtagentcore.so) to file '/app/dynatrace/agent/conf/agentversion.XJET_XJET'
